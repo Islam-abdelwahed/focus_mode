@@ -8,6 +8,7 @@ class Handler(BaseHTTPRequestHandler):
         with open('static/index.html', 'r') as file:
             self.wfile.write(file.read().encode())
 
+
 # For Vercel deployment
 def vercel_handler(request):
     handler = Handler()
